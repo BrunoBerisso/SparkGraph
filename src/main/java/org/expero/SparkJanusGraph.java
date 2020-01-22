@@ -2,7 +2,10 @@ package org.expero;
 
 import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource;
 import org.apache.tinkerpop.gremlin.spark.process.computer.SparkGraphComputer;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.apache.tinkerpop.gremlin.structure.util.GraphFactory;
+
+import java.util.List;
 
 public class SparkJanusGraph {
 
@@ -17,8 +20,8 @@ public class SparkJanusGraph {
                 .traversal().withComputer(SparkGraphComputer.class);
 
         System.out.println(("Running query..."));
-        Long value = g.V().count().next();
-        System.out.println("Processed " + value + " vertex on a Spark job");
+        List<Vertex> result = g.V().toList();
+        System.out.println("Processed " + result.size() + " vertex on a Spark job");
 
         System.exit(0);
     }

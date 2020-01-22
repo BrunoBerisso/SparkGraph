@@ -44,26 +44,35 @@
 <!--                        -->
 <!--        Janus Graph     -->
 <!--                        -->
+<!--
+    These dependencies might vary depending on the settings of the graph the Spark job will be
+    getting the data. The dependencies listed here are the ones needed for a graph backed by
+    Cassandra and indexed with ElasticSearch.
+-->
 
         <dependency>
             <groupId>org.janusgraph</groupId>
             <artifactId>janusgraph-core</artifactId>
             <version>${janusgraph.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.janusgraph</groupId>
             <artifactId>janusgraph-es</artifactId>
             <version>${janusgraph.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.janusgraph</groupId>
             <artifactId>janusgraph-cassandra</artifactId>
             <version>${janusgraph.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.janusgraph</groupId>
             <artifactId>janusgraph-hadoop</artifactId>
             <version>${janusgraph.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
