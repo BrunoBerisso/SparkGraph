@@ -1,5 +1,5 @@
 # SparkGraph
-The aim of this project is to show how to setup an OLAP job running on a Spark cluster consuming data from JanusGraph.
+The aim of this project is to show how to setup an OLAP job running on a stand-alone Spark cluster consuming data from JanusGraph. If you need help getting it to run under a cluster manager feel free to [open an issue](https://github.com/BrunoBerisso/SparkGraph/issues/new) and I will try to help you.
 
 ## Setup
 For this test we need to install the following:
